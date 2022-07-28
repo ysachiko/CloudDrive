@@ -1,0 +1,73 @@
+@import "../../utils/colors";
+
+.profile-container{
+  width: 80%;
+  height: 50%;
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+
+  &__delete {
+    margin-top: 5vh;
+    color: @background-color;
+    border: none;
+    cursor: pointer;
+    background-color: @second-color;
+    font-size: 16px;
+
+    border-radius: 2px;
+    width: 10vw;
+    height: 4vh;
+    min-width: 156px;
+    min-height: 40px;
+    &:hover {
+      color: @accent-color;
+      transition: 0.3s;
+    }
+  }
+
+  a {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 3vh;
+  }
+
+  &__label {
+    margin-top: 2vh;
+    cursor: pointer;
+    border: 2px dashed @second-color;
+    text-align: center;
+    padding: 5px 10px;
+    width: 10vw;
+    height: 4vh;
+    min-width: 156px;
+    min-height: 40px;
+    &:hover {
+      background-color: @second-color;
+      color: @accent-color;
+      transition: 0.3s;
+    }
+  }
+  &__avatar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__back{
+
+    height: 30px;
+    width: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: no-repeat center;
+    background-size: contain;
+    background-image: url("../../assets/img/back.png");
+  }
+
+  &__input{
+    display: none;
+  }
+}

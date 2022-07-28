@@ -1,0 +1,104 @@
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px #1a2238;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+}
+.file__img {
+  justify-self: center;
+  width: 2.5vw;
+  height: 5vh;
+}
+.file:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+.file__name {
+  grid-column-start: 2;
+}
+.file__date {
+  grid-column-start: 5;
+  justify-self: center;
+}
+.file__size {
+  grid-column-start: 6;
+  justify-self: center;
+}
+.file__btn {
+  display: none;
+  padding: 5px;
+  border: none;
+  background-color: #1a2238;
+  color: white;
+  font-size: 16px;
+  max-width: 10vw;
+}
+.file__btn:hover {
+  color: #ff6a3d;
+  transition: 0.3s;
+}
+.file:hover .file__date {
+  grid-column-start: 3;
+  transition: 0.2s;
+}
+.file:hover .file__size {
+  grid-column-start: 4;
+  transition: 0.2s;
+}
+.file:hover .file__download {
+  grid-column-start: 5;
+  display: block;
+  transition: 0.2s;
+}
+.file:hover .file__delete {
+  grid-column-start: 6;
+  display: block;
+  transition: 0.2s;
+}
+.file-plate {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+.file-plate__name {
+  height: 2.5vh;
+  overflow: hidden;
+}
+.file-plate__img {
+  height: 100px;
+  width: 100px;
+}
+.file-plate__btns {
+  display: none;
+}
+.file-plate:hover .file-plate__btns {
+  display: flex;
+}
+.file-plate__btns {
+  width: 100%;
+  justify-content: center;
+}
+.file-plate__btn {
+  padding: 5px;
+  border: none;
+  background-color: #1a2238;
+  color: white;
+  font-size: 14px;
+  max-width: 5vw;
+}
+.file-plate__btn:hover {
+  color: #ff6a3d;
+  transition: 0.3s;
+}
+.file-plate__download {
+  margin-right: 2.5px;
+}
+.file-plate__delete {
+  margin-left: 2.5px;
+}
+/*# sourceMappingURL=file.css.map */

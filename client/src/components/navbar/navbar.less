@@ -1,0 +1,78 @@
+@import "../../utils/colors";
+
+.navbar {
+  display: flex;
+  height: 7vh;
+  min-height: 50px;
+  background-color: @second-color;
+  width: 100%;
+
+  .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-size: 26px;
+  }
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+  }
+}
+
+.container__logo{
+  display: flex;
+  align-items: center;
+  margin-left: 5vw;
+
+  &__logo {
+    width: 50px;
+    height: 40px;
+  }
+  &__title {
+    margin-left: 1vw;
+  }
+  &__search {
+    background-color: @background-color;
+    width: 10vw;
+    margin-left: 20px;
+  }
+}
+
+.container__form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5vw;
+
+  &__login {
+    margin-right: 2vw;
+    & a{
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: @accent-color;
+        transition: 0.3s;
+      }
+    }
+  }
+  &__registration a{
+    text-decoration: none;
+    color: white;
+
+    &:hover{
+      color: @accent-color;
+      transition: 0.3s;
+    }
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}

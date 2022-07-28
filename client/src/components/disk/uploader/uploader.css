@@ -1,0 +1,47 @@
+.uploader {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  background-color: #1a2238;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  overflow-y: auto;
+}
+.uploader__header {
+  display: flex;
+  justify-content: space-between;
+}
+.uploader__title {
+  color: white;
+  font-size: 1.2rem;
+}
+.uploader__close {
+  padding: 3px;
+}
+.upload-file {
+  background-color: white;
+  margin: 5px 0;
+  padding: 5px 10px;
+}
+.upload-file__header {
+  display: flex;
+  justify-content: space-between;
+}
+.upload-file__progress-bar {
+  height: 1rem;
+  background-color: #9daaf2;
+  display: flex;
+  margin: 3px 0;
+}
+.upload-file__upload-bar {
+  background-color: green;
+  width: 50%;
+}
+.upload-file__percent {
+  color: white;
+  left: 50%;
+  position: absolute;
+  margin-top: -3px;
+}
+/*# sourceMappingURL=uploader.css.map */

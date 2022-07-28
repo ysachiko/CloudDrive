@@ -1,0 +1,39 @@
+@import "../../utils/colors";
+
+.authorisation {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 40vh;
+  min-height: 380px;
+  min-width: 320px;
+  align-items: center;
+  background-color: @main-color;
+  padding: 30px;
+
+  &__header {
+    font-size: 28px;
+    font-weight: 700;
+    color: @second-color;
+  }
+
+  input{
+    margin: 4vh 20px;
+  }
+  &__btn {
+    margin-top: 2vh;
+    padding: 10px;
+    font-size: 28px;
+    color: @background-color;
+    border: none;
+    cursor: pointer;
+    background-color: @second-color;
+    justify-content: flex-end;
+    border-radius: 2px;
+
+    &:hover {
+      color: @accent-color;
+      transition: 0.3s;
+    }
+  }
+}

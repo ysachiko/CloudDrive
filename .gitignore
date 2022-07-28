@@ -1,0 +1,11 @@
+# dependencies
+server/node_modules
+
+.idea
+
+#dependencies
+client/node_modules
+
+server/files
+server/static
+server/config

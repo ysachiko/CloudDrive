@@ -1,0 +1,113 @@
+@import "../../../../utils/colors";
+
+.file {
+  margin: 10px 0;
+  border-bottom: solid 2px @second-color;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+
+  &__img {
+    justify-self: center;
+    width: 2.5vw;
+    height: 5vh;
+    //min-width: 2px;
+    //min-height: 2px;
+  }
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.2s;
+  }
+  &__name {
+    grid-column-start: 2;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+  &__btn {
+    display: none;
+    padding: 5px;
+    border: none;
+    background-color: @second-color;
+    color: @background-color;
+    font-size: 16px;
+    max-width: 10vw;
+  }
+  &__btn:hover {
+    color: @accent-color;
+    transition: 0.3s;
+  }
+  &:hover &__date {
+    grid-column-start: 3;
+    transition: 0.2s;
+  }
+  &:hover &__size {
+    grid-column-start: 4;
+    transition: 0.2s;
+  }
+  &:hover &__download {
+    grid-column-start: 5;
+    display: block;
+    transition: 0.2s;
+  }
+  &:hover &__delete {
+    grid-column-start: 6;
+    display: block;
+    transition: 0.2s;
+  }
+}
+
+.file-plate {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+
+  &__name {
+    height: 2.5vh;
+    overflow: hidden;
+  }
+
+  &__img {
+    height: 100px;
+    width: 100px;
+  }
+  &__btns {
+    display: none;
+  }
+  &:hover &__btns {
+    display: flex;
+  }
+  &__btns {
+    width: 100%;
+    justify-content: center;
+  }
+  &__btn {
+    padding: 5px;
+    border: none;
+    background-color: @second-color;
+    color: @background-color;
+    font-size: 14px;
+    max-width: 5vw;
+    &:hover {
+      color: @accent-color;
+      transition: 0.3s;
+    }
+  }
+  &__download {
+    margin-right: 2.5px;
+  }
+  &__delete {
+    margin-left: 2.5px;
+  }
+}

@@ -1,0 +1,65 @@
+.profile-container {
+  width: 80%;
+  height: 50%;
+  justify-self: flex-start;
+  align-self: flex-start;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+.profile-container__delete {
+  margin-top: 5vh;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #1a2238;
+  font-size: 16px;
+  border-radius: 2px;
+  width: 10vw;
+  height: 4vh;
+  min-width: 156px;
+  min-height: 40px;
+}
+.profile-container__delete:hover {
+  color: #ff6a3d;
+  transition: 0.3s;
+}
+.profile-container a {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 3vh;
+}
+.profile-container__label {
+  margin-top: 2vh;
+  cursor: pointer;
+  border: 2px dashed #1a2238;
+  text-align: center;
+  padding: 5px 10px;
+  width: 10vw;
+  height: 4vh;
+  min-width: 156px;
+  min-height: 40px;
+}
+.profile-container__label:hover {
+  background-color: #1a2238;
+  color: #ff6a3d;
+  transition: 0.3s;
+}
+.profile-container__avatar {
+  display: flex;
+  flex-direction: column;
+}
+.profile-container__back {
+  height: 30px;
+  width: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: no-repeat center;
+  background-size: contain;
+  background-image: url("../../assets/img/back.png");
+}
+.profile-container__input {
+  display: none;
+}
+/*# sourceMappingURL=profile.css.map */
