@@ -16,6 +16,7 @@ const Navbar = () => {
 	const dispatch = useDispatch()
 	const [searchName, setSearch] = useState('')
 	const [searchTimeout, setSearchTimeout] = useState(false)
+	console.log(currentUser.avatar)
 	const avatar = currentUser.avatar ? `${API_URL + currentUser.avatar}` : avatarLogo
 
 	function searchHandler(e) {

@@ -15,7 +15,7 @@ class FileController {
 				file.path = name
 				await fileService.createDir(file)
 			} else {
-				file.path = `${parentFile.path}\\${file.name}`
+				file.path = `${parentFile.path}/${file.name}`
 				await fileService.createDir(file)
 				parentFile.childs.push(file._id)
 				await parentFile.save()
@@ -71,9 +71,9 @@ class FileController {
 			user.usedSpace += file.size
 			let path;
 			if (parent) {
-				path =`${config.get('filePath')}\\${user.id}\\${parent.path}\\${file.name}`
+				path =`${config.get('filePath')}/${user.id}/${parent.path}/${file.name}`
 			} else {
-				path =`${config.get('filePath')}\\${user.id}\\${file.name}`
+				path =`${config.get('filePath')}/${user.id}/${file.name}`
 			}
 			if (fs.existsSync(path)) {
 				return res.status(400).json({message: "File already exist"})
@@ -82,7 +82,7 @@ class FileController {
 			const type = file.name.split('.').pop()
 			let filePath = file.name
 			if (parent) {
-				filePath = parent.path + "\\" + file.name
+				filePath = parent.path + "/" + file.name
 			}
 			const dbFile = new File({
 				name: file.name,
@@ -151,7 +151,7 @@ class FileController {
 			const file = req.files.file
 			const user = await User.findById(req.user.id)
 			const avatarName = Uuid.v4() + ".jpg"
-			file.mv(config.get('staticPath') + "\\" + avatarName)
+			file.mv(config.get('staticPath') + "/" + avatarName)
 			user.avatar = avatarName
 			await user.save()
 			return res.json(user)
@@ -163,7 +163,7 @@ class FileController {
 	async deleteAvatar(req, res) {
 		try {
 			const user = await User.findById(req.user.id)
-			fs.unlinkSync(config.get('staticPath') + '\\' + user.avatar)
+			fs.unlinkSync(config.get('staticPath') + '/' + user.avatar)
 			user.avatar = null
 			await user.save()
 			return res.json(user)
